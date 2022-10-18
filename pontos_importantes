@@ -10,3 +10,66 @@ ESTRUTURA
 
   src  -> são os scripts js que vão definir o comportamento da aplicação 
         e enessa pasta que ficam os codigos.
+
+
+JSX 
+ o JSX equivale a escrever html porem compilado por javascript, existem algumas diferenças de tipagem 
+ e recursos, em algums casos quando esquecemos de fechar uma tag o navegador fecha ela usando
+ um recurso chamado degradação graciosa. exatamente pra evitar problemas no layout, no 
+ jsx se esquecemos de fechar uma tag ele não compila aplicação ela mostra o erro para que
+ ele seja corrigido. 
+
+ const Componente = <h1> conteudo do Componente </h1>
+
+ possibilidades basicas do jsx o script abaxi fica dentro do arquivo app.js 
+ que pertence a apsta src, basicamente devemos considerar 3 espaços o espaço superior 
+ a função app serve para importar classes e recursos que a apilicação vai precisar usar 
+ dentro da função app é ode o jsx vai funcionar  e a parte inferior tem uma diretiva que 
+ serve para litramente jogaro elemento dela ra fora para que ele fique acessivel para ser 
+ carregado e executado.
+
+ as variveis são declaradas dentro da função app e fora da função return 
+ a função return como o nome ja diz ela so retorna os componetes, no codigo abaixo 
+ existem 3 tipos de retorno 
+
+ retorno de valor de variavel concatenado 
+ retorno de um função 
+ pode se dizer que esse é um componente 
+------------------------------------------------------------------------------
+import './App.css';
+
+function App() {
+
+   const name = "ivan"
+
+   const newName = name.toUpperCase()
+
+   function sum(a,b){
+     return a + b
+   }
+
+
+  return (
+    <div className="App">
+
+      <h2>Aterando o jsx</h2>
+      <h2>Olá,{newName}</h2>
+      <h2>soma: {sum(1,2)}</h2>
+       
+      
+    </div>
+  );
+}
+
+export default App;
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
