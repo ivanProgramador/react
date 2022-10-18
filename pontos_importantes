@@ -1,0 +1,12 @@
+ESTRUTURA
+ Um projeto do tipo react usa basicamente 3 diretorios e 4 arquivos 
+
+ diretorios 
+ node_modules -> resposnavel por gusradar todas as dependencias do react 
+                que vão se usadas pra fazer ele funcionar.
+  
+ public - > essa pasta contem os aqruivos publicos que vão ser exibidos 
+            o index.html as imagens que vão aparecr no front.
+
+  src  -> são os scripts js que vão definir o comportamento da aplicação 
+        e enessa pasta que ficam os codigos.
