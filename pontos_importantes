@@ -64,6 +64,205 @@ function App() {
 export default App;
 
 -----------------------------------------------------------------------
+a pasta node modules esta sendo ignorada pelo git por isso tem que reinstalar toda vez que for transferir o projeto
+issoi aocntece somente acom a pasta node_modeules 
+---------------------------------------------------------------------------
+CRIANDO COMPONENTES
+  Os componentes ficam dentro da pasta src como um aplicativo react pode ter muitos componetes é um convençaõ criar uma apsta chamada 
+  components e dentro dela fazer a divisão dos componetes por tipo usando uma pasta interne para cada tipo de componente mas nesse caso 
+  eu vou iniciar colocando só a pasta components mesmo.
+
+  dentro dela eu vou colocar o compoente HelloWorld.js é importante atentar para outra convenção de nomenclatura as palavras possuem sempre
+  a primeira letra maiuscula.
+
+  O compoente e basicamente uma função javascrpt que retorna um jsx 
+
+
+  --------------------------------------------------
+  function HelloWorld(){
+
+        return(
+
+            <div>
+                
+            <h1> Meu primeiro componente </h1>
+
+            </div>
+
+        )
+    }
+
+    export default HelloWorld;
+  --------------------------------------------------    
+
+  para chamar um compoente pra ele aparecer de fato e necessario importar ele dentro do arquivo app.js
+  usando essa diretiva 
+
+  import HelloWorld from './components/HelloWorld'
+
+  A teoria dos componetes consiste tambem na reutilização deles um componen pode ser importado de qualquer lugar 
+  não precisa ser encessariamente da pasta padrão mas cporquestões de organização é bom que seja, no caso abaxo 
+  eu criei outro componente chamado frase que vai ser importado dentro do compoente HelloWorld.js e vai ser renderizado pelo app.js 
+  por herança ou seja um compoente dentro do outro.assim eles pode ser reaproveitados varias vezes.em varios lugares dentro da mesma
+  pagina.
+
+  No codigo abaixo eu coloco o compoente frase dentro do component HelloWorld.
+
+          import Frase from './Frase'
+
+          function HelloWorld(){
+
+              return(
+
+                  <div>
+                  
+                  <Frase/>    
+                  <h1> Meu primeiro componente </h1>
+
+                  </div>
+
+              )
+          }
+
+          export default HelloWorld;
+
+    -----------------------------------------------------------------------------------------------------------------
+    PROPS 
+
+      funciona como um objeto coringa a função do componente recebe um props como parametro e retorna um atributo especifico do props
+      no caso abaixo props.nome esse atributo nome passa a existir quando ele epassado pelo elemento   
+
+            function SayMyName(props){
+
+                return(
+
+                    <h1>Fala ai {props.nome}, suave ?</h1>
+                )
+
+            }
+
+            export default SayMyName;  
+
+        Aqui eo compomente na app.js recebendo o nome como parametro e eo valor 
+        ---------------------------------------------------------------------------------------
+         
+                import './App.css';
+                import HelloWorld from './components/HelloWorld'
+                import SayMyName from './components/SayMyName'
+
+                function App() {
+                  return (
+                    <div className="App">
+                      <HelloWorld/>
+                      <SayMyName nome="ivan" />
+                    </div>
+                  );
+                }
+
+                export default App; 
+    ---------------------------------------------------------------------------------------------------
+    
+    ou seja ele se comporta como um objeto coringa que recebe qual quer atributo passado a ele 
+    mais o porps e dinamico eo o paramentro pode receber mais que um valor. conforme a necessidade o componete eo mesmo 
+    so muda o valor. 
+
+
+        import './App.css';
+                import HelloWorld from './components/HelloWorld'
+                import SayMyName from './components/SayMyName'
+
+                function App() {
+                  return (
+                    <div className="App">
+                      <HelloWorld/>
+                      <SayMyName nome="ivan" />
+                      <SayMyName nome="jose" />
+                    </div>
+                  );
+                }
+
+                export default App; 
+
+    ---------------------------------------------------------------------------------------------
+
+    UM EXEMPLO DE UM ELEMENTOS COM VARIOS ATRIBUTOS 
+
+              function Pessoa(props){
+
+              return(
+                
+                  <div>
+
+                      <img src={props.foto} alt={props.nome} />
+                      <h2>Nome: {props.nome}</h2>
+                      <h2>Idade: {props.idade}</h2>
+                      <h2>Profissão: {props.profissao}</h2>
+
+                  </div>
+                  
+
+              )
+
+
+          }
+
+          export default Pessoa 
+
+
+    um problema nesse caso pode ser a repétição do termo props
+
+    a refatoração para corrigir isso pode ser jogando os tributos direto nos parametros 
+
+
+       function Pessoa({nome,idade,profissao,foto}){
+
+              return(
+                
+                  <div>
+
+                      <img src={foto} alt={props.nome} />
+                      <h2>Nome: {nome}</h2>
+                      <h2>Idade: {idade}</h2>
+                      <h2>Profissão: {profissao}</h2>
+
+                  </div>
+                  
+
+              )
+
+
+          }
+
+          export default Pessoa 
+    
+
+     
+
+
+
+------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
 
 
 
