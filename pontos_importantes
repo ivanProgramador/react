@@ -316,7 +316,55 @@ export default List
 No caso eu criei um componente List.js e depois criei outro chamdo Item.js 
 so dois usando fragment depois eu chamei o elemento Item para compor os list itens 
 do component list, ou seja a estrategia por tras disso e mostrar que e possivel 
-manipular ate o mais pequeno item de uma iterface usanso react.
+manipular ate o mais pequeno item de uma iterface usando react.
+
+-------------------------------------------------------------------------------
+PROP TYPES
+  Até o momento eu usei props sem os tipos especificos, o  valor estava sendo definido pelo nome do atributo,
+  e não pelo typo de dado, se eu passo um props sem definir o tipo ele assume o valor que vier, ou seja  
+  props e generico.
+
+  Mas existem formas de controlar isso. No componente abaixo o caso se for definido que o valor 
+  da propridade de um componente e um numero ele não vai aceitar string e assim por diante 
+  para fazer o uso desse tipo de tecnica um classe chamada PropTypes tem que ser chamada 
+  e ela vendo do modulo prop-types. assim é possivel controlar o typo de dados que o sistema vai receber.
+
+------------------------------------------------------------------------
+
+    import PropTypes from 'prop-types'
+
+    function Item({marca , ano_lancamento}){
+
+        return(
+            <>
+              <li>{marca} - {ano_lancamento}</li>
+            
+            </>
+        )
+    }
+
+    Item.propTypes = {
+      marca: PropTypes.string.isRequired,
+      ano_lancamento: propTypes.number.isRequired
+    }
+
+    Item.defaultProps={
+      
+      marca: 'faltou a marca',
+      ano_lancamento: 0
+
+    }
+
+    export default Item
+
+    -----------------------------------------------------------
+  
+
+   
+
+
+
+
 
 
 
