@@ -285,6 +285,46 @@ CSS MODULES
               }
               export default Frase;
 
+--------------------------------------------------------------------------------------------
+REACT FRAGMENT
+
+  São elementos que não precisam de um elemento pai como por exemplo uma div para identificar esses fragmentos  
+  basta olhar a div deles elas não tem nome <></> dentro do componente.
+  O dodigo abaixo é um exemplo de fragment.
+
+
+  function List(){
+
+      return(
+
+          <>
+            <h2>Minha lista</h2>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ul>
+          
+          
+          </>
+      )
+      }
+
+export default List
+
+---------------------------------------------------------------------
+
+No caso eu criei um componente List.js e depois criei outro chamdo Item.js 
+so dois usando fragment depois eu chamei o elemento Item para compor os list itens 
+do component list, ou seja a estrategia por tras disso e mostrar que e possivel 
+manipular ate o mais pequeno item de uma iterface usanso react.
+
+
+
+
+
+
+
+
 
 
    
