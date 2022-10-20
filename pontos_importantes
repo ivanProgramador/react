@@ -234,14 +234,60 @@ CRIANDO COMPONENTES
           }
 
           export default Pessoa 
-    
-
-     
-
-
 
 ------------------------------------------------------------------------------------------
+CSS MODULES 
 
+   O arquivo que configura o css global da aplicação eo index.css que esta na pasta src 
+   porem vale lembrar que centratlizar um css de uma aplicação em um unico arquivo pode causar
+   problemas em relação a estrtura do codigo eo tamanho do css. um asolução e usar uma estrategia 
+   chamada css modules onde é possivel aplicar o css a nivel de componente.Deixando o index.css 
+   somente com as configurações padrão. 
+
+   criando um css module para o componente Frase.js eu vou nomear assim Frase.module.css com isso o react
+   ja sabe que esse css pertence ao componente Frase.js.
+
+   ATENÇÃO 
+     Embora o  Frase.module.css seja um css ele não aceita nome de classe usando ifem ou usa _ ou usa camel case 
+     ifem ele não aceita.
+
+   codigo do css module 
+
+          .fraseContainer{
+          
+            background-color:#333;
+            border:1px solid #111; 
+        }
+
+        .fraseContent{
+            color:#fff;
+            background-color:#333;
+            margin:0;
+
+
+        }
+
+    aplicando o css no componente
+    
+---------------------------------------------------------------------------------------------------
+              import styles from './Frase.module.css'
+
+
+
+
+              function Frase(){
+
+                  return(
+                  <div className={styles.fraseContainer}>
+                        <h1 className={styles.fraseContent} >Eu sou um componente com uma frase </h1>
+                    </div>
+                  )
+              }
+              export default Frase;
+
+
+
+   
 
 
 
