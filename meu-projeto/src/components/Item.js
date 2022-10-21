@@ -13,7 +13,7 @@ function Item({marca , ano_lancamento}){
 
 Item.propTypes = {
    marca: PropTypes.string.isRequired,
-   ano_lancamento: propTypes.number.isRequired
+   ano_lancamento: PropTypes.number.isRequired
 }
 
 Item.defaultProps={
