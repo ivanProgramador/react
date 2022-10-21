@@ -358,8 +358,46 @@ PROP TYPES
     export default Item
 
     -----------------------------------------------------------
-    teste 
-  
+    EVENTOS REACT 
+      como dito inicialmente qualquer elemento html pode ser um componente ate um formulario 
+      no codigo abaixo eu fiz um componete formulario que ao ser submetido ele manda uma mensagem para o console 
+      mas isso so e possivel porque eu uso o metodo preventdefault() que evita que o formulario seja submetido permeitindo 
+      que eu possa maqnipular oque vai acontecer com os dados ou com o formulario quando o cliente apertar um botão. 
+
+                        function Form(){
+                        
+                      
+                        function meuEvento(e){
+
+                            e.preventDefault()
+
+                            console.log("Cadastrado")
+
+                            
+                        }
+
+
+                    return(
+                          <div>
+                                  <h1>Cadastro</h1>
+                                    <form onSubmit={meuEvento}>
+                                        <div>
+                                          <input type="text" placeholder="nome"/>
+                                        </div>
+
+                                        <div>
+                                          <input type="submit" value="Cadastrar"/>
+                                        </div>
+                                    </form>
+                          </div>
+
+                      )
+                  }
+
+                  export default Form
+
+  ---------------------------------------------------------------------------------------------------
+                    
 
    
 
