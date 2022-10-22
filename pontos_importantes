@@ -397,7 +397,75 @@ PROP TYPES
                   export default Form
 
   ---------------------------------------------------------------------------------------------------
-                    
+  REACT hoocks
+
+     No js tradicional o jeito de tratar os dados vindos de um formulario é diferente da foirma como são tratados no react 
+     a seuqencia de captura desses dados e feita atraves de useState trata-se de um metodo onde definimos as constantes e 
+     atribuimos o valor recebido por elas. 
+
+     no codigo abaixo eu tenhio um compomente formulario usando um hoock useState, traves do evento submit os valores são enviados 
+     para as variveis name e password que depois que recebem esse valores eles são passados para o useState que se comporta com um array 
+     que recebe a avriavel eo valor em cada indice e depois no aocnsole eu mostro os valores.
+
+     ----------------------------------------------------------------------------------------------------------------
+
+     import {useState} from 'react'
+
+
+function Form(){
+      
+    
+     function meuEvento(e){
+
+          e.preventDefault()
+          
+          console.log(`O usuario ${name} for cadastrado com a senha ${password}`)
+         }
+
+
+    const [name,setName] = useState() 
+    const [password,setPassword] = useState() 
+
+
+
+
+       return(
+            <div>
+                <h1>Cadastro</h1>
+                   <form onSubmit={meuEvento}>
+                      <div>
+                        <label htmlFor="name" >Nome</label>
+                            <input
+                               type="text"
+                               id="name"
+                               name="name"
+                                placeholder="digite seu nome"
+                                onChange={(e)=>setName(e.target.value)}
+                            />
+                      </div>
+
+                      <div>
+                       <label htmlFor="password">Senha:</label>
+                          <input 
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="digite sua senha"
+                            onChange={(e)=>setPassword(e.target.value)}
+                            />
+
+                       </div>
+                      <div>
+                         <input type="submit" value="Cadastrar"/>
+                      </div>
+                   </form>
+           </div>
+
+     )
+}
+
+export default Form
+--------------------------------------------------------------------------------------                    
 
    
 
