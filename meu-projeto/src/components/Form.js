@@ -8,7 +8,7 @@ function Form(){
 
           e.preventDefault()
           
-          console.log(`O usuario ${name} for cadastrado com a senha ${password}`)
+          console.log(`O usuario ${name} foi cadastrado com a senha ${password}`)
          }
 
 

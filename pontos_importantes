@@ -466,6 +466,17 @@ function Form(){
 
 export default Form
 --------------------------------------------------------------------------------------                    
+PASSANDO EVENTOS POR PROPS 
+    Até o momento oque foi passado pelo porps foram dados simples, mas tambem é possivel que atráves desses props
+    eventos tambem sejam passados, isso ajuda porque um elemnto pode herdar do seu pai um evento seja ele para mudar
+    de cor pra indicar um compra ou ate mesmo mudar algum componente da classe pai com uma mensagem de aviso.
+    e dentro do elemento pode-se usar a sintaxe:
+
+    props.evento 
+--------------------------------------------------------------------------------------------
+
+
+
 
    
 
