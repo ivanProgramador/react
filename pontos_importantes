@@ -475,6 +475,25 @@ PASSANDO EVENTOS POR PROPS
     props.evento 
 --------------------------------------------------------------------------------------------
 
+RENDERIZAÇÃO CONDICIONAL 
+   Aqui eu me deparei com algo muito diferente doique eu estava acostumado visto que a estrtura condicional esta abseada em um teste 
+   implicito no caso ele verifica se a varivel user email tem algo se sim ele retorna a div. E como se oretorno fosse o metodo return
+   só que sem a descrição que geralmente o acompanha
+
+       {userEmail && (
+
+                     <div>
+                         <p>O e-mail do usuario é:{userEmail}</p>
+                     </div>
+                 )} 
+
+  Explicando o compoente Condicional.js ele é um fomrulario que tem um botão quando esse botão é acionado ele verifica se existe alum valor 
+  dentro do input se existir ele retorna uma div mostrando o conteudo e essa div tem um botão que limpa o emial tornando a condição verdadeira 
+  e apagando a div.Nesse caso variaveis do tipo useState estão sendo usadas para monitorar o componente e seu conteudo as ações executadas dentro desse 
+  componente estão baseadas no estado atual do mesmo.   
+  ------------------------------------------------------------------------------------------------------------------------------
+  
+
 
 
 
