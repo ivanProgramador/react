@@ -492,12 +492,39 @@ RENDERIZAÇÃO CONDICIONAL
   e apagando a div.Nesse caso variaveis do tipo useState estão sendo usadas para monitorar o componente e seu conteudo as ações executadas dentro desse 
   componente estão baseadas no estado atual do mesmo.   
   ------------------------------------------------------------------------------------------------------------------------------
-  RENDERIZAÇÃO DE LISTA 
+RENDERIZAÇÃO DE LISTA 
     Normalmente o array de lista fica dentro do proprio app.js e variavel que contem os dados desse array e passada para o componete
     dentro do metodo de retorno do componente ele pega oque veio pela função joga em uma variavel e usa a função m,aps para mapear tudo
     oque estiver dentro dela como se fosse um foreach itens.map(item,index) o primero parametro diz como queremos nomear cada item encontrado
     o segundo diz pra ele adixcionar um id para cada um deles, geralmente o id ja vem do back end nesse caso eu so adicionei o index ai pra mostrar.
-  --------------------------------------------------------------------------------------------------------------------------------------------------------
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+STATE LIFT 
+   O state funciona como fosse um get só que diferente porque ele recebe no primeiro parametro 
+   a constante e no segundo a função que ela vai executar que no caso eo setState.No caso a variavel
+   vira uma função que recebe o valor do statte do componente.
+
+   const [email , setEmail] = useState()
+   const [userEmail, setUserEmail] = useState()
+
+LIFT STATE 
+   Normalmente um state é definido dentro do componente filho que vai ser renderizado pela classe pai,
+   e que vaiser alterado direto no seu atributo no caso de um state lift, o state fica dentro da classe 
+   principal centralizando a responsabilidade toda no compomente pai.
+
+   é basicamente um get/set porem o state lift não funciona mais ate o momento
+   se quiser usar o state tem que ser no modo tradicional mesmo 
+   -------------------------------------------------------------------------------------------------
+
+  
+
+    
+
+
+
+
+
+ 
+
   
 
 
