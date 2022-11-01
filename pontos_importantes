@@ -491,13 +491,16 @@ RENDERIZAÇÃO CONDICIONAL
   dentro do input se existir ele retorna uma div mostrando o conteudo e essa div tem um botão que limpa o emial tornando a condição verdadeira 
   e apagando a div.Nesse caso variaveis do tipo useState estão sendo usadas para monitorar o componente e seu conteudo as ações executadas dentro desse 
   componente estão baseadas no estado atual do mesmo.   
-  ------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
   RENDERIZAÇÃO DE LISTA 
     Normalmente o array de lista fica dentro do proprio app.js e variavel que contem os dados desse array e passada para o componete
     dentro do metodo de retorno do componente ele pega oque veio pela função joga em uma variavel e usa a função m,aps para mapear tudo
     oque estiver dentro dela como se fosse um foreach itens.map(item,index) o primero parametro diz como queremos nomear cada item encontrado
-    o segundo diz pra ele adixcionar um id para cada um deles, geralmente o id ja vem do back end nesse caso eu so adicionei o index ai pra mostrar.
+    o segundo diz pra ele adicionar um id para cada um deles, geralmente o id ja vem do back-end nesse caso eu so adicionei o index ai pra mostrar.
   --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  
   
 
 
