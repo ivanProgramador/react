@@ -523,7 +523,7 @@ LIFT STATE
    e que vaiser alterado direto no seu atributo no caso de um state lift, o state fica dentro da classe 
    principal centralizando a responsabilidade toda no compomente pai.
 
-   é basicamente um get/set porem o state lift não funciona mais ate o momento
+   é basicamente um get/set
    se quiser usar o state tem que ser no modo tradicional mesmo 
    -------------------------------------------------------------------------------------------------
 
@@ -538,7 +538,31 @@ LIFT STATE
  
 
 >>>>>>> c16504d070abf006183c2b7e5b79cee06b40fdb1:pontos_importantes.txt
+----------------------------------------------------------------------------
+
+REACT ROUTES
+  O react ROUTES é um pacote de mudança de url da aplicação podemos assim acessar outras views sem precisar recarregar a pagina
+  trocando apenas uma parte da aplicação, que muda de view para view, para fazer isso e preciso instalar um pacote no projeto
+  e fazer algumas alterações na estrutura do app.
+
+  a primeira coisa pra fazer e instalar o pacote 
+
+  npm install react-router-dom 
+
   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

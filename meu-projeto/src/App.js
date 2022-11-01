@@ -1,20 +1,39 @@
 
 import './App.css'
-import { useState } from 'react'
-import SeuNome from './components/SeuNome';
+import {BrowserRouter as Router, Switch,Route,link} from 'react-router-dom'
 
-const [nome,setNome] = useState()
+
+
+
 
 function App() {
 
-  
+ 
 
   return (
     <div className="App">
-      <h2>State Lift</h2>
+    
+        <Router>
 
-      <SeuNome setNome={setNome}/>
+          <ul>
+            <li>
+               <Link to="/" >Home</Link>
+            </li>
+
+            <li>
+               <Link to="/empresa" >Empresa</Link>
+            </li>
+
+            <li>
+               <Link to="/contato" >Contato</Link>
+            </li>
+
+          </ul>
+
         
+
+
+        </Router>
 
       
          
