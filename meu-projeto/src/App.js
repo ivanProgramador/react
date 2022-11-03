@@ -1,6 +1,13 @@
 
 import './App.css'
-import {BrowserRouter as Router, Switch,Route,link} from 'react-router-dom'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import Home from './components/pages/Home'
+import Empresa from './components/pages/Empresa'
+import Contato from './components/pages/Contato'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+
+
 
 
 
@@ -11,36 +18,34 @@ function App() {
  
 
   return (
-    <div className="App">
+    
     
         <Router>
 
-          <ul>
-            <li>
-               <Link to="/" >Home</Link>
-            </li>
+           <Navbar/>
+               
+                        <Routes>
+                            <Route path="/" element={<Home />} > </Route>
+                        </Routes>
 
-            <li>
-               <Link to="/empresa" >Empresa</Link>
-            </li>
+                        <Routes>
+                            <Route path="/empresa" element={<Empresa />} > </Route>
+                        </Routes>
 
-            <li>
-               <Link to="/contato" >Contato</Link>
-            </li>
-
-          </ul>
-
-        
-
+                        <Routes>
+                            <Route path="/contato" element={<Contato />} > </Route>
+                        </Routes>
+            <Footer/>
+              
 
         </Router>
 
-      
+        
          
-    </div>
+       
 
     
-  );
+  )
 }
 
 export default App;
